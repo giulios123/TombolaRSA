@@ -11,7 +11,7 @@
 - Lo stato della vista gioco non contiene target/K come props renderizzabili.
 - `ValidatedGameSequence` è un tipo nominale creato solo dopo il controllo indipendente del solver; il motore accetta quel tipo e ricontrolla la permutazione.
 - La UI usa un guard temporale e ignora `KeyboardEvent.repeat` per evitare doppie estrazioni da click/tastiera ravvicinati.
-- L'estrazione UI ha una fase `drawing` di 2,5 secondi: il motore avanza solo al termine, senza numeri fittizi; gli input sono bloccati e `prefers-reduced-motion` rimuove il movimento mantenendo l'attesa.
+- L'estrazione UI ha una fase `drawing` di 1,5 secondi: il motore avanza solo al termine, senza numeri fittizi; gli input sono bloccati e `prefers-reduced-motion` rimuove il movimento mantenendo l'attesa.
 - L'animazione della fase `drawing` usa solo CSS per rappresentare un bussolotto con più palline astratte; non visualizza mai valori che potrebbero essere confusi con la sequenza reale.
 - Tema scuro e alta leggibilità sono preferenze locali indipendenti, applicate tramite attributi di presentazione e combinabili.
 - L'indicatore operatore opzionale conserva soltanto l'insieme dei numeri della cartella in un riferimento UI privato; un puntino decorativo `aria-hidden` espone solo un booleano visivo sul numero corrente e viene eliminato al reset.

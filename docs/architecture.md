@@ -47,7 +47,7 @@ Tratta l'output del solver come non attendibile. Non riusa scorciatoie o stato i
 `src/App.tsx` conosce temporaneamente target e K nel setup. Al passaggio a `running`, lo stato renderizzato contiene soltanto lo snapshot pubblico del game engine. La vista di gioco non riceve target, K o metadati del solver come props.
 
 La UI mantiene inoltre una fase transitoria `drawing`, separata dallo stato del
-motore: per 2,5 secondi mostra l'animazione CSS e blocca nuovi input, poi chiede
+motore: per 1,5 secondi mostra l'animazione CSS e blocca nuovi input, poi chiede
 una sola estrazione al `GameEngine`. Il motore resta privo di target, K e metadati
 di presentazione.
 

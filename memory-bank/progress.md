@@ -30,7 +30,7 @@ Data: 2026-08-15
 - [x] Revisione UI: setup allineato, layout landscape senza scroll alle viewport target, fallback mobile senza overflow orizzontale.
 - [x] Tema scuro e alta leggibilità combinabili con preferenze locali al dispositivo.
 - [x] Indicatore operatore opzionale, decorativo e non accessibile, con numeri target confinati a un riferimento UI privato.
-- [x] Estrazione scenografica CSS di 2,5 secondi con blocco input e supporto `prefers-reduced-motion`.
+- [x] Estrazione scenografica CSS di 1,5 secondi con blocco input e supporto `prefers-reduced-motion`.
 - [x] Animazione di estrazione aggiornata con bussolotto CSS e più palline, senza numeri fittizi.
 - [x] README ampliato con guida all'avvio, uso operatore, accessibilità, struttura e verifica.
 - [x] Workflow GitHub Actions per build e deploy automatico su GitHub Pages, con base path dinamico.

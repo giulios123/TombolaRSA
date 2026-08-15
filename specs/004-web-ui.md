@@ -44,7 +44,7 @@ Offrire un'interfaccia essenziale, leggibile a distanza e discreta, adatta a not
 
 ## Estrazione scenografica
 
-- ogni comando valido entra in una fase UI `drawing` di 2,5 secondi;
+- ogni comando valido entra in una fase UI `drawing` di 1,5 secondi;
 - durante la fase viene mostrata soltanto un'animazione CSS di estrazione, senza
   numeri fittizi o anticipazioni della sequenza;
 - il `GameEngine` avanza soltanto al termine della fase;
@@ -114,5 +114,5 @@ Dopo il novantesimo numero il pulsante di estrazione e disabilitato o sostituito
 - [x] Nessun overflow a 1920x1080, 1366x768 e 1024x768.
 - [x] Tema scuro e alta leggibilità funzionano singolarmente e insieme.
 - [x] Indicatore discreto disattivato per default e non accessibile.
-- [x] Estrazione scenografica di 2,5 secondi con riduzione del movimento.
+- [x] Estrazione scenografica di 1,5 secondi con riduzione del movimento.
 - [x] Nessun backend, telemetria o persistenza involontaria.
