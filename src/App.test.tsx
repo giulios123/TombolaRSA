@@ -186,4 +186,32 @@ describe("App UI", () => {
       "0 / 90",
     );
   });
+
+  it("allows replacing the draw count without preserving a leading zero", () => {
+    const input = document.querySelector<HTMLInputElement>("#winning-draw");
+    if (!input) throw new Error("Winning draw input not found");
+
+    act(() => {
+      input.focus();
+    });
+    expect(input.value).toBe("");
+
+    act(() => {
+      const setNativeValue = Object.getOwnPropertyDescriptor(
+        HTMLInputElement.prototype,
+        "value",
+      )?.set;
+      setNativeValue?.call(input, "15");
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    expect(input.value).toBe("15");
+
+    act(() => input.blur());
+    expect(input.value).toBe("15");
+
+    act(() => input.focus());
+    expect(input.value).toBe("");
+    act(() => input.blur());
+    expect(input.value).toBe("50");
+  });
 });

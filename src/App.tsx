@@ -119,6 +119,10 @@ function App() {
   const [view, setView] = useState<View>("setup");
   const [targetCardId, setTargetCardId] = useState(1);
   const [winningDraw, setWinningDraw] = useState(DEFAULT_WINNING_DRAW);
+  const [winningDrawDraft, setWinningDrawDraft] = useState(
+    String(DEFAULT_WINNING_DRAW),
+  );
+  const [isWinningDrawEditing, setIsWinningDrawEditing] = useState(false);
   const [operatorCueEnabled, setOperatorCueEnabled] = useState(false);
   const [gameState, setGameState] = useState(initialEngineState);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -187,6 +191,8 @@ function App() {
     setIsPreparing(false);
     setTargetCardId(1);
     setWinningDraw(DEFAULT_WINNING_DRAW);
+    setWinningDrawDraft(String(DEFAULT_WINNING_DRAW));
+    setIsWinningDrawEditing(false);
   }, [operatorCueEnabled, targetCardId, winningDraw]);
 
   const drawNext = useCallback(() => {
@@ -232,6 +238,8 @@ function App() {
     setOperatorCueEnabled(false);
     setTargetCardId(1);
     setWinningDraw(DEFAULT_WINNING_DRAW);
+    setWinningDrawDraft(String(DEFAULT_WINNING_DRAW));
+    setIsWinningDrawEditing(false);
     setView("setup");
   }, []);
 
@@ -319,10 +327,27 @@ function App() {
                   type="number"
                   min={15}
                   max={90}
-                  value={winningDraw}
-                  onChange={(event) =>
-                    setWinningDraw(Number(event.target.value))
-                  }
+                  value={isWinningDrawEditing ? winningDrawDraft : winningDraw}
+                  onFocus={() => {
+                    setIsWinningDrawEditing(true);
+                    setWinningDrawDraft("");
+                  }}
+                  onChange={(event) => {
+                    const draft = event.target.value;
+                    setWinningDrawDraft(draft);
+                    if (draft !== "") setWinningDraw(Number(draft));
+                  }}
+                  onBlur={() => {
+                    const parsed = Number(winningDrawDraft);
+                    if (winningDrawDraft === "" || !Number.isFinite(parsed)) {
+                      setWinningDraw(DEFAULT_WINNING_DRAW);
+                      setWinningDrawDraft(String(DEFAULT_WINNING_DRAW));
+                    } else {
+                      setWinningDraw(parsed);
+                      setWinningDrawDraft(String(parsed));
+                    }
+                    setIsWinningDrawEditing(false);
+                  }}
                 />
                 <span className="field-help">
                   Inserisci un valore tra 15 e 90.
