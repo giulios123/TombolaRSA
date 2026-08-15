@@ -83,7 +83,7 @@ describe("App UI", () => {
     vi.useRealTimers();
   });
 
-  it("waits 2.5 seconds and advances only once", () => {
+  it("waits 1.5 seconds and advances only once", () => {
     startGame();
     draw();
 
@@ -94,7 +94,7 @@ describe("App UI", () => {
       "0 / 90",
     );
 
-    act(() => vi.advanceTimersByTime(2499));
+    act(() => vi.advanceTimersByTime(1499));
     expect(document.querySelector(".draw-counter")?.textContent).toContain(
       "0 / 90",
     );
