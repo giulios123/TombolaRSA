@@ -417,7 +417,12 @@ function App() {
                 <span aria-hidden="true">
                   {isDrawing ? (
                     <span className="draw-animation" aria-hidden="true">
-                      <span className="draw-ball" />
+                      <span className="draw-drum">
+                        <span className="draw-ball draw-ball-one" />
+                        <span className="draw-ball draw-ball-two" />
+                        <span className="draw-ball draw-ball-three" />
+                        <span className="draw-ball draw-ball-four" />
+                      </span>
                       <span className="draw-dots">•••</span>
                     </span>
                   ) : (

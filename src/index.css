@@ -431,25 +431,75 @@ input[type="number"] {
   font-size: 1.25rem;
 }
 
-.draw-ball {
+.draw-drum {
   position: absolute;
-  width: 4rem;
-  height: 4rem;
-  border: 0.45rem solid var(--primary);
-  border-right-color: transparent;
+  width: 5.8rem;
+  height: 4.2rem;
+  overflow: hidden;
+  border: 0.3rem solid var(--primary);
   border-radius: 50%;
-  animation: tumble 820ms linear infinite;
+  transform: rotate(-10deg);
+  animation: cage-rock 720ms ease-in-out infinite;
 }
 
-.draw-ball::after {
+.draw-drum::before,
+.draw-drum::after {
   position: absolute;
-  width: 0.7rem;
-  height: 0.7rem;
-  top: 0.3rem;
-  left: 0.55rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
   content: "";
-  background: var(--current);
+  border: 0.12rem solid var(--primary);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
   border-radius: 50%;
+  opacity: 0.55;
+}
+
+.draw-drum::before {
+  left: 1.25rem;
+  right: 1.25rem;
+}
+
+.draw-drum::after {
+  left: 2.15rem;
+  right: 2.15rem;
+}
+
+.draw-ball {
+  position: absolute;
+  z-index: 1;
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 0.12rem solid var(--surface);
+  border-radius: 50%;
+  background: var(--current);
+  animation: ball-roll 680ms ease-in-out infinite alternate;
+}
+
+.draw-ball-one {
+  top: 0.65rem;
+  left: 1rem;
+}
+
+.draw-ball-two {
+  top: 1.9rem;
+  left: 1.85rem;
+  background: var(--primary-strong);
+  animation-delay: -220ms;
+}
+
+.draw-ball-three {
+  top: 0.9rem;
+  right: 1.35rem;
+  background: var(--text-muted);
+  animation-delay: -410ms;
+}
+
+.draw-ball-four {
+  right: 0.7rem;
+  bottom: 0.55rem;
+  background: var(--current);
+  animation-delay: -120ms;
 }
 
 .draw-dots {
@@ -560,9 +610,22 @@ input[type="number"] {
   font-weight: 950;
 }
 
-@keyframes tumble {
+@keyframes cage-rock {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-0.15rem);
+  }
+}
+
+@keyframes ball-roll {
+  from {
+    transform: translate(-0.15rem, 0.2rem);
+  }
   to {
-    transform: rotate(360deg);
+    transform: translate(0.45rem, -0.25rem);
   }
 }
 

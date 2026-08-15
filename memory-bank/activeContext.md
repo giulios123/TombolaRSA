@@ -4,7 +4,7 @@ Data: 2026-08-15
 
 ## Focus
 
-Fase 3 e 5 completate per il core: RNG astratto, solver con fallback esatto, validatore indipendente, sequenze marcate validate e game engine sono implementati e testati. La UI setup/gioco ora include layout landscape senza scroll, preferenze di tema locali, alta leggibilità, indicatore operatore opzionale e estrazione scenografica temporizzata. E2E automatizzati e stress completo restano aperti.
+Fase 3 e 5 completate per il core: RNG astratto, solver con fallback esatto, validatore indipendente, sequenze marcate validate e game engine sono implementati e testati. La UI setup/gioco ora include layout landscape senza scroll, preferenze di tema locali, alta leggibilità, indicatore operatore opzionale e un'estrazione scenografica con bussolotto CSS a più palline. E2E automatizzati e stress completo restano aperti.
 
 ## Prossimo passo
 
