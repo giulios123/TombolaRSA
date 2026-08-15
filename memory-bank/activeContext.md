@@ -8,7 +8,7 @@ Fase 3 e 5 completate per il core: RNG astratto, solver con fallback esatto, val
 
 ## Prossimo passo
 
-Eseguire benchmark/stress e completare E2E sulla UI; il build sotto un base path non radice è già stato verificato.
+Eseguire benchmark/stress e completare E2E sulla UI; il build sotto un base path non radice e il workflow GitHub Pages sono già predisposti.
 
 ## Attenzioni
 

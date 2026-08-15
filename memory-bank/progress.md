@@ -33,6 +33,7 @@ Data: 2026-08-15
 - [x] Estrazione scenografica CSS di 2,5 secondi con blocco input e supporto `prefers-reduced-motion`.
 - [x] Animazione di estrazione aggiornata con bussolotto CSS e più palline, senza numeri fittizi.
 - [x] README ampliato con guida all'avvio, uso operatore, accessibilità, struttura e verifica.
+- [x] Workflow GitHub Actions per build e deploy automatico su GitHub Pages, con base path dinamico.
 - [x] Test UI Vitest per timer, doppie attivazioni, reset, indicatore, preferenze e scorciatoie da tastiera.
 - [x] QA browser a 1920x1080, 1366x768, 1024x768 e 390x844; build verificata anche con base path `/tombola/`.
 - [x] Stress test separato disponibile; run rappresentativo da 1.000 casi superato in 5.389 ms.

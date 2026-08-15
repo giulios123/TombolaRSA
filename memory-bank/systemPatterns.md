@@ -15,4 +15,5 @@
 - L'animazione della fase `drawing` usa solo CSS per rappresentare un bussolotto con più palline astratte; non visualizza mai valori che potrebbero essere confusi con la sequenza reale.
 - Tema scuro e alta leggibilità sono preferenze locali indipendenti, applicate tramite attributi di presentazione e combinabili.
 - L'indicatore operatore opzionale conserva soltanto l'insieme dei numeri della cartella in un riferimento UI privato; un puntino decorativo `aria-hidden` espone solo un booleano visivo sul numero corrente e viene eliminato al reset.
+- Il deploy statico usa GitHub Pages tramite workflow GitHub Actions: installazione da lockfile, test, lint, build Vite con base path derivato dal nome repository e deploy dell'artefatto `dist`.
 - Web Worker e PWA sono decisioni evidence-driven, successive a benchmark e core funzionante.

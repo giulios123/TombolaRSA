@@ -36,7 +36,18 @@ Apri l'indirizzo locale mostrato da Vite nel browser. Per una build statica:
 
 ```bash
 pnpm build
-pnpm preview
+pnpm run preview:dist
+```
+
+Apri l'indirizzo HTTP mostrato da Vite, normalmente
+`http://127.0.0.1:4173/`. Non aprire `dist/index.html` con un doppio clic:
+un URL `file:///...` viene bloccato dal browser perché i moduli JavaScript
+richiedono un'origine HTTP/HTTPS.
+
+In alternativa puoi usare un qualsiasi server statico, per esempio:
+
+```bash
+python3 -m http.server 4173 --directory dist
 ```
 
 La directory `dist/` può essere pubblicata su un hosting statico. Per un sito
@@ -45,6 +56,24 @@ servito sotto un prefisso, ad esempio `/tombola/`:
 ```bash
 VITE_BASE_PATH=/tombola/ pnpm build
 ```
+
+## Pubblicazione su GitHub Pages
+
+Il repository contiene già il workflow
+`.github/workflows/deploy-pages.yml`. Dopo aver pubblicato il progetto su
+GitHub:
+
+1. usa il branch `main` come branch principale;
+2. vai in **Settings → Pages**;
+3. in **Build and deployment → Source** seleziona **GitHub Actions**;
+4. fai un push su `main` oppure avvia manualmente il workflow dalla scheda
+   **Actions**.
+
+Il workflow installa le dipendenze con il lockfile, esegue test e lint, calcola
+automaticamente il base path corretto per un repository di progetto oppure per
+un repository personale `USERNAME.github.io`, costruisce `dist/` e lo pubblica.
+L'URL sarà `https://USERNAME.github.io/NOME_REPOSITORY/` per un repository di
+progetto oppure `https://USERNAME.github.io/` per il repository personale.
 
 ## Uso durante una partita
 
@@ -55,7 +84,7 @@ VITE_BASE_PATH=/tombola/ pnpm build
    il numero corrente appartiene alla cartella scelta. L'opzione è disattivata
    per default e vale soltanto per quella partita.
 3. Premi **Avvia partita**.
-4. Premi **Estrai numero** e attendi l'animazione del bussolotto: dura 2,5
+4. Premi **Estrai numero** e attendi l'animazione del bussolotto: dura 1,5
    secondi e il numero viene mostrato soltanto alla fine.
 5. Usa **Nuova partita** per tornare al setup; se una partita è in corso viene
    chiesta conferma.
