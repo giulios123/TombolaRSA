@@ -1,9 +1,8 @@
 # Tombola RSA
 
-Tombola RSA è una web app statica, locale e senza raccolta dati personali per
-gestire una tombola ricreativa in una RSA. L'operatore prepara la partita,
-avvia l'estrazione e usa il tabellone come riferimento visivo per le persone
-presenti.
+Tombola RSA aiuta a gestire una tombola ricreativa in una RSA. L'operatore
+prepara la partita, avvia l'estrazione e usa il tabellone come riferimento
+visivo per le persone presenti.
 
 ## Come funziona
 
@@ -15,13 +14,16 @@ Prima della partita l'operatore sceglie:
 - facoltativamente, un indicatore discreto per controllare i numeri della
   cartella senza mostrarne il significato durante il gioco.
 
+Durante la partita non vengono mostrati la cartella scelta, il momento previsto
+per il completamento, la sequenza futura o informazioni riservate
+all'organizzazione della partita.
+
+## Dettagli tecnici
+
 La sequenza dei numeri viene generata interamente nel browser, verificata dal
 validatore indipendente e consegnata al motore solo dopo il superamento dei
-controlli. Durante la partita non vengono mostrati cartella scelta, obiettivo,
-sequenza futura o dettagli del solver.
-
-L'app non usa backend, account, API remote, database, telemetria o persistenza
-della partita.
+controlli. L'app non usa backend, account, API remote, database, telemetria o
+persistenza della partita.
 
 ## Avvio rapido
 
@@ -101,10 +103,10 @@ doppie avanzate accidentali.
 - **Alta leggibilità**: aumenta contrasto, peso tipografico e spessore dei
   contorni; può essere combinata con il tema scuro.
 
-Le preferenze di visualizzazione vengono salvate solo nel browser del
-dispositivo. La partita e i dati delle cartelle non vengono salvati al refresh.
-Con `prefers-reduced-motion` l'attesa dell'estrazione resta presente, ma il
-bussolotto non si muove.
+Le preferenze di visualizzazione vengono salvate solo sul dispositivo. La
+partita e i dati delle cartelle non vengono mantenuti se ricarichi la pagina.
+Se il dispositivo è impostato per ridurre i movimenti, l'attesa resta
+presente ma il bussolotto non si muove.
 
 Il layout mostra numero, comandi e tabellone nella stessa vista su notebook e
 tablet landscape. Su schermi stretti si impila verticalmente per mantenere i

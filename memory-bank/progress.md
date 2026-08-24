@@ -32,6 +32,8 @@ Data: 2026-08-15
 - [x] Indicatore operatore opzionale, decorativo e non accessibile, con numeri target confinati a un riferimento UI privato.
 - [x] Estrazione scenografica CSS di 1,5 secondi con blocco input e supporto `prefers-reduced-motion`.
 - [x] Animazione di estrazione aggiornata con bussolotto CSS e più palline, senza numeri fittizi.
+- [x] Link discreto alla documentazione aggiunto alla schermata pre-partita.
+- [x] Documento utente statico generato dal README con comandi, accessibilità e link diretto alle cartelle scaricabili.
 - [x] README ampliato con guida all'avvio, uso operatore, accessibilità, struttura e verifica.
 - [x] Workflow GitHub Actions per build e deploy automatico su GitHub Pages, con base path dinamico.
 - [x] Test UI Vitest per timer, doppie attivazioni, reset, indicatore, preferenze e scorciatoie da tastiera.

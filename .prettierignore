@@ -2,4 +2,5 @@ dist
 node_modules
 coverage
 data/source
+public/documentazione.html
 pnpm-lock.yaml

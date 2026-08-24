@@ -336,6 +336,21 @@ input[type="number"] {
   text-transform: uppercase;
 }
 
+.documentation-link {
+  display: block;
+  width: fit-content;
+  margin: 0.75rem auto 0;
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.documentation-link:hover {
+  color: var(--primary-strong);
+}
+
 .game-shell {
   width: min(100%, 120rem);
   margin: 0 auto;

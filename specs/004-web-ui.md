@@ -14,6 +14,10 @@ Offrire un'interfaccia essenziale, leggibile a distanza e discreta, adatta a not
 - validazione prima della generazione;
 - messaggi chiari per input errato o combinazione impossibile;
 - ingresso nella vista gioco solo dopo generazione e validazione complete.
+- link discreto alla documentazione utente, visibile soltanto nel setup;
+- la documentazione utente è un file statico generato dal README a ogni build e
+  contiene soltanto le sezioni rivolte all'operatore, più il link diretto alle
+  cartelle scaricabili.
 - campi di setup allineati su righe comuni per etichetta, controllo e aiuto;
 - opzione facoltativa e disattivata per default `Indicatore discreto operatore`;
 - l'opzione spiega soltanto nel setup che il puntino accanto al marchio segnala
@@ -116,3 +120,7 @@ Dopo il novantesimo numero il pulsante di estrazione e disabilitato o sostituito
 - [x] Indicatore discreto disattivato per default e non accessibile.
 - [x] Estrazione scenografica di 1,5 secondi con riduzione del movimento.
 - [x] Nessun backend, telemetria o persistenza involontaria.
+- [x] Link discreto alla documentazione utente presente nella schermata
+      pre-partita.
+- [x] Documentazione utente generata dal README senza dettagli tecnici e con
+      link diretto alle cartelle scaricabili.

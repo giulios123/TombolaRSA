@@ -386,6 +386,14 @@ function App() {
             >
               {isPreparing ? "Preparazione…" : "Avvia partita"}
             </button>
+            <a
+              className="documentation-link"
+              href="./documentazione.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Documentazione
+            </a>
           </section>
         </main>
       </div>

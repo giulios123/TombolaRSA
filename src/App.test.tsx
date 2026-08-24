@@ -83,6 +83,21 @@ describe("App UI", () => {
     vi.useRealTimers();
   });
 
+  it("shows a small documentation link only in the pre-game setup", () => {
+    const documentationLink = document.querySelector<HTMLAnchorElement>(
+      ".documentation-link",
+    );
+    expect(documentationLink?.textContent).toBe("Documentazione");
+    expect(documentationLink?.getAttribute("href")).toBe(
+      "./documentazione.html",
+    );
+    expect(documentationLink?.target).toBe("_blank");
+    expect(documentationLink?.rel).toContain("noreferrer");
+
+    startGame();
+    expect(document.querySelector(".documentation-link")).toBeNull();
+  });
+
   it("waits 1.5 seconds and advances only once", () => {
     startGame();
     draw();

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentazione | Tombola RSA</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #102a43;
+        background: #f3f7fa;
+      }
+
+      * { box-sizing: border-box; }
+
+      body { margin: 0; }
+
+      main {
+        width: min(100% - 2rem, 48rem);
+        margin: 0 auto;
+        padding: 2rem 0 3rem;
+      }
+
+      article {
+        padding: clamp(1.25rem, 5vw, 3rem);
+        background: #fff;
+        border: 1px solid #d9e2ec;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 3rem rgb(16 42 67 / 12%);
+      }
+
+      h1, h2 { line-height: 1.1; }
+      h1 { margin: 0 0 1.5rem; font-size: clamp(2rem, 7vw, 3.25rem); }
+      h2 { margin: 2.25rem 0 0.85rem; font-size: clamp(1.35rem, 4vw, 1.8rem); }
+      p, li { color: #486581; font-size: 1.05rem; line-height: 1.65; }
+      ul, ol { padding-left: 1.5rem; }
+      li + li { margin-top: 0.5rem; }
+      strong { color: #102a43; }
+      a { color: #145d80; font-weight: 750; }
+      a:focus-visible { outline: 4px solid #d9901e; outline-offset: 3px; }
+      .inline-note { color: #627d98; }
+      .downloads { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #d9e2ec; }
+      .download-link { display: inline-block; padding: 0.8rem 1rem; border-radius: 0.6rem; background: #d9eef7; }
+
+      @media (max-width: 520px) {
+        main { padding-top: 1rem; }
+        p, li { font-size: 1rem; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Tombola RSA</h1>
+<p>Tombola RSA aiuta a gestire una tombola ricreativa in una RSA. L&#39;operatore prepara la partita, avvia l&#39;estrazione e usa il tabellone come riferimento visivo per le persone presenti.</p>
+<h2>Come funziona</h2>
+<p>Prima della partita l&#39;operatore sceglie:</p>
+<ul>
+<li>una cartella ufficiale da 1 a 90;</li>
+<li>il numero di estrazione al quale quella cartella deve completarsi, da 15 a 90;</li>
+<li>facoltativamente, un indicatore discreto per controllare i numeri della cartella senza mostrarne il significato durante il gioco.</li>
+</ul>
+<p>Durante la partita non vengono mostrati la cartella scelta, il momento previsto per il completamento, la sequenza futura o informazioni riservate all&#39;organizzazione della partita.</p>
+<h2>Uso durante una partita</h2>
+<ol>
+<li>Nella schermata di preparazione scegli la cartella e il numero di estrazione.</li>
+<li>Se serve, abilita <strong>Indicatore discreto operatore</strong>. Il puntino accanto a “Tombola RSA” è un dettaglio decorativo neutro e cambia appena colore quando il numero corrente appartiene alla cartella scelta. L&#39;opzione è disattivata per default e vale soltanto per quella partita.</li>
+<li>Premi <strong>Avvia partita</strong>.</li>
+<li>Premi <strong>Estrai numero</strong> e attendi l&#39;animazione del bussolotto: dura 1,5 secondi e il numero viene mostrato soltanto alla fine.</li>
+<li>Usa <strong>Nuova partita</strong> per tornare al setup; se una partita è in corso viene chiesta conferma.</li>
+</ol>
+<p>Durante l&#39;estrazione il pulsante e le scorciatoie restano bloccati per evitare doppie avanzate accidentali.</p>
+<h2>Comandi e accessibilità</h2>
+<ul>
+<li><strong>Spazio</strong> o <strong>Invio</strong>: estrai il prossimo numero quando il focus non è su un controllo interattivo;</li>
+<li><strong>F</strong>: prova ad attivare o disattivare lo schermo intero;</li>
+<li><strong>Tema scuro</strong>: cambia il tema chiaro/scuro;</li>
+<li><strong>Alta leggibilità</strong>: aumenta contrasto, peso tipografico e spessore dei contorni; può essere combinata con il tema scuro.</li>
+</ul>
+<p>Le preferenze di visualizzazione vengono salvate solo sul dispositivo. La partita e i dati delle cartelle non vengono mantenuti se ricarichi la pagina. Se il dispositivo è impostato per ridurre i movimenti, l&#39;attesa resta presente ma il bussolotto non si muove.</p>
+<p>Il layout mostra numero, comandi e tabellone nella stessa vista su notebook e tablet landscape. Su schermi stretti si impila verticalmente per mantenere i numeri leggibili.</p>
+        <section class="downloads" aria-labelledby="downloads-title">
+          <h2 id="downloads-title">Scarica le cartelle</h2>
+          <p>Qui puoi scaricare il PDF con le cartelle e il tabellone.</p>
+          <a class="download-link" href="https://github.com/giulios123/TombolaRSA/raw/main/data/source/Cartelle-Tabellone.pdf" target="_blank" rel="noreferrer">Scarica le cartelle (PDF)</a>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
