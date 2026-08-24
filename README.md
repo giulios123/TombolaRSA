@@ -9,7 +9,7 @@ presenti.
 
 Prima della partita l'operatore sceglie:
 
-- una cartella ufficiale da 1 a 90;
+- una cartella ufficiale da 1 a 90 ( per scaricare le tabelle https://github.com/giulios123/TombolaRSA/blob/main/data/source/Cartelle-Tabellone.pdf );
 - il numero di estrazione al quale quella cartella deve completarsi, da 15 a
   90;
 - facoltativamente, un indicatore discreto per controllare i numeri della
