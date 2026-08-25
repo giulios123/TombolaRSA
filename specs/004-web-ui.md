@@ -17,7 +17,8 @@ Offrire un'interfaccia essenziale, leggibile a distanza e discreta, adatta a not
 - link discreto alla documentazione utente, visibile soltanto nel setup;
 - la documentazione utente è un file statico generato dal README a ogni build e
   contiene soltanto le sezioni rivolte all'operatore, più il link diretto alle
-  cartelle scaricabili.
+  cartelle scaricabili; durante `vite dev` viene rigenerata automaticamente
+  quando il README cambia.
 - campi di setup allineati su righe comuni per etichetta, controllo e aiuto;
 - opzione facoltativa e disattivata per default `Indicatore discreto operatore`;
 - l'opzione spiega soltanto nel setup che il puntino accanto al marchio segnala
@@ -124,3 +125,5 @@ Dopo il novantesimo numero il pulsante di estrazione e disabilitato o sostituito
       pre-partita.
 - [x] Documentazione utente generata dal README senza dettagli tecnici e con
       link diretto alle cartelle scaricabili.
+- [x] Aggiornamento automatico della documentazione durante `vite dev` quando
+      cambia il README.
