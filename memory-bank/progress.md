@@ -1,6 +1,6 @@
 # Progress
 
-Data: 2026-08-15
+Data: 2026-11-07
 
 ## Completato
 
@@ -39,6 +39,7 @@ Data: 2026-08-15
 - [x] Test UI Vitest per timer, doppie attivazioni, reset, indicatore, preferenze e scorciatoie da tastiera.
 - [x] QA browser a 1920x1080, 1366x768, 1024x768 e 390x844; build verificata anche con base path `/tombola/`.
 - [x] Stress test separato disponibile; run rappresentativo da 1.000 casi superato in 5.389 ms.
+- [x] Build Pages ripristinato mantenendo la verifica pnpm dell'età minima; installazione frozen, test, lint e build con base path superati.
 
 ## Non iniziato
 

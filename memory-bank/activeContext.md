@@ -1,6 +1,6 @@
 # Active context
 
-Data: 2026-08-24
+Data: 2026-11-07
 
 ## Focus
 
@@ -9,6 +9,9 @@ Fase 3 e 5 completate per il core: RNG astratto, solver con fallback esatto, val
 ## Prossimo passo
 
 Eseguire benchmark/stress e completare E2E sulla UI; il build sotto un base path non radice e il workflow GitHub Pages sono già predisposti.
+
+Il job build Pages è stato ripristinato dopo aver riportato il lockfile alle
+risoluzioni note e già conformi alla verifica pnpm dell'età minima delle release.
 
 ## Attenzioni
 
