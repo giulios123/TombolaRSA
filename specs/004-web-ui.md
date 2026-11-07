@@ -127,3 +127,5 @@ Dopo il novantesimo numero il pulsante di estrazione e disabilitato o sostituito
       link diretto alle cartelle scaricabili.
 - [x] Aggiornamento automatico della documentazione durante `vite dev` quando
       cambia il README.
+- [x] Il workflow Pages installa le dipendenze dal lockfile senza disabilitare
+      la verifica pnpm dell'età minima delle release.
